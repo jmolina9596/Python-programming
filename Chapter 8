@@ -1,0 +1,42 @@
+"""
+This program creates a function that takes a string argument and returns a set
+of only letters ('a-z' and 'A-Z') that are contained in the string
+"""
+
+def main():
+
+    
+def letters(str1):
+    str1 = input("Please enter word:")
+    set1 = set()
+    for letter in str1:
+        if char.islower(): #Checks if letters in str1 are lowercase
+            set1.add(char) #Adds to the set
+        if char.isupper(): #Checks if letters in str1 are uppercase
+            set1.add(char) #Adds to the set
+    return set1
+
+
+def lettersinBoth(str1, str2):
+    str1 = input("please enter word:") #Ask user for input
+    str2 = input("Please enter word:") #Ask user for input
+    seta = 'abcdefghijklmnopqrstuvwxyz'
+    setb = seta.upper()
+    set1 = set()
+    set2 = set()
+    for char in str1:
+        if char.islower():
+            set1.add(char)
+        if char.isupper():
+            set1.add(char)
+    for char in str2:
+        if char.islower():
+            set2.add(char)
+        if char.isupper():
+            set2.add(char)
+    
+
+
+
+
+
