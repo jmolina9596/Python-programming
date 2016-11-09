@@ -49,3 +49,85 @@ tally.click()
 tally.setlimit(2)
 result = tally.getValue()
 print("Value:", result)
+
+##
+# This moduel defines the SodaCan class.
+#
+
+#Models a calculator that caculates the surface area and volume of a can
+#
+import math
+
+class SodaCan:
+    def __init__(self, height, radius):
+        self.radius = radius
+        self.height = height
+
+    def getSurfaceArea(self):
+        self.surfacearea = (2*math.pi*self.height) + (2*math.pi*self.radius**2)
+        return self.surfacearea
+
+    def getVolume(self):
+        self.volume = (math.pi*self.radius**2*self.height)
+        return self.volume
+        
+##
+# This program calculates the surface area and volume of a can
+
+from SodaCan import SodaCan #import class from file
+
+def main():
+    can = SodaCan(2,4)
+    print("The volume of the can is", can.getVolume() )
+    print("The surface area of the can is", can.getSurfaceArea())
+main()
+
+##
+#This is a module that defines the Student class
+
+class Student:
+    #create a constructor for student
+    def __init__(self, name, score = 0):
+        self.name = name
+        self.score = score
+        self.QL = []
+
+    def getName(self):
+        return self.name
+
+    def addQuiz(self, score):
+        self.QL.append(score)
+
+    def getTotalScore(self):
+        total = 0
+        for i in range(0, len(self.QL)):
+            total = total + self.QL[i]
+        return total
+    def getAverageScore(self):
+        average = self.getTotalScore() / len(self.QL)
+        return average
+
+from Student import Student
+
+def main():
+    s = Student("Bob")
+
+    #Add some quiz scores.
+    s.addQuiz(50)
+    s.addQuiz(90)
+    s.addQuiz(75)
+
+    print(s.getName(),"had a total score of %f." % s.getTotalScore() )
+    print("The average score was %.1f." % s.getAverageScore() )
+
+main()
+
+    
+
+
+
+
+
+
+        
+        
